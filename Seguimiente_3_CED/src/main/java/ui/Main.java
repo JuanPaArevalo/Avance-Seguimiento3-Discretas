@@ -25,7 +25,7 @@ public class Main {
                     break;
                 case 2:
                     System.out.println("Inserte la palabra a analizar");
-                    String word = in.nextLine();
+                    String word = in.nextLine().toLowerCase();
                     System.out.println("Es palindromo: " + cont.palindrome(word));
                     break;
                 case 3:

@@ -10,10 +10,10 @@ public class Controller {
     }
 
     public String orderValues() {
-        List<Integer> duplicates = new ArrayList<>();
+        List<Integer> duplicates = new ArrayList<>(); //1
 
         for (int i = 0; i < arrNum.length - 1; i++) {
-            if (arrNum[i] == arrNum[i + 1] && (duplicates.isEmpty() || duplicates.get(duplicates.size() - 1) != arrNum[i])) {
+            if (arrNum[i] == arrNum[i + 1] && (duplicates.isEmpty() || duplicates.get(duplicates.size() - 1) != arrNum[i])) { //n veces
                 duplicates.add(arrNum[i]);
             }
         }
@@ -22,9 +22,20 @@ public class Controller {
     }
 
     public boolean palindrome(String word) {
-        String reversed = new StringBuilder(word).reverse().toString();
-        return word.equalsIgnoreCase(reversed);
+        int left = 0;
+        int right = word.length() - 1;
+
+        while (left < right) {
+            if (word.charAt(left) != word.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+
+        return true;
     }
+
 
     public int bitCounter(String bits){
         int count = 0;
