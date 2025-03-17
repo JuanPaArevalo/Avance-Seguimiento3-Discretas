@@ -26,7 +26,14 @@ public class Controller {
         return word.equalsIgnoreCase(reversed);
     }
 
-    public int bitCounter(int bits) {
-        return Integer.bitCount(bits);
+    public int bitCounter(String bits){
+        int count = 0;
+        for (char bit : bits.toCharArray()) {   //Complejidad O(n). Depende de la longitud de cadena enviada.
+            //Mejor caso = O(n), Peor caso O(n). Siempre recorrerá longitud entera de cadena
+            if (bit == '1') {
+                count++;
+            }
+        }
+        return count; //metodo que retorna conteo de 1s en una cadena de bits
     }
 }

@@ -30,9 +30,12 @@ public class Main {
                     break;
                 case 3:
                     System.out.println("Inserte su cadena de bits:");
-                    int bits = in.nextInt();
-                    in.nextLine();
-                    System.out.println("Conteo de bits en 1: " + cont.bitCounter(bits));
+                    String bits = in.nextLine();
+
+                    int result = cont.bitCounter(bits);
+                    System.out.println("Número de '1's en tu cadena: "+result);
+
+                    cont.bitCounter(bits);
                     break;
                 case 4:
                     System.out.println("Gracias");
