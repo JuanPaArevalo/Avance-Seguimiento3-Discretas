@@ -43,7 +43,7 @@ public class Controller {
         int left = 0; // Se ejecuta 1 vez
         int right = word.length() - 1; // Se ejecuta 1 vez
 
-        while (left < right) { //Se ejecuta n veces
+        while (left < right) { //Se ejecuta n/2 veces. Complejidad O(n)
             if (word.charAt(left) != word.charAt(right)) { // Se ejecutará n - 1 veces. Complejidad O(1)
                 return false; //Se ejecuta n - 1 veces. Complejidad O(1)
             }
